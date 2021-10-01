@@ -3,7 +3,7 @@
  */
 import {defaultToString} from "./utils.js";
 
-class ValuePairs {
+export class ValuePairs {
     constructor(key, value) {
         this.key = key;
         this.value = value;
@@ -159,7 +159,7 @@ export default class HashTable {
         let keys = Object.keys(this.table);
         let objString = `{${keys[0]} => ${this.table[keys[0]].toString()}}`
         for (let i = 1; i < keys.length; i++) {
-            objString = `${objString},{${keys[i]} => ${this.table[keys[i]].toString()}}`
+            objString = `${objString}\r\n{${keys[i]} => ${this.table[keys[i]].toString()}}`
         }
         return objString;
     }

@@ -1,16 +1,7 @@
 /**
  * Created by yh on 2021/9/30
  */
-function defaultToString(key) {
-    if (key === null) {
-        return 'NULL'
-    } else if (key === undefined) {
-        return 'UNDEFINED';
-    } else if (typeof key === 'string' || key instanceof String) {
-        return `${key}`;
-    }
-    return key.toString();
-}
+import {defaultToString} from "./utils.js";
 
 class ValuePairs {
     constructor(key, value) {
